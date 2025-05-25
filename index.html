@@ -69,18 +69,19 @@
 					<li><a href="#ambiente">Ambiente</a></li>
 					<li><a href="#foco">Focos</a></li>
 					<li><a href="#desenvolvimento">Desenvolvimento</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
 				</ul>
 			</nav>
 		</header>
 		<div class="hero">
 			<div>
-				<h1>Análise do Projeto</h1>
+				<h1>Projeto: VibeBuild</h1>
 				<p>Documentação, processo e resultados</p>
 			</div>
 		</div>
 			<section id="objetivo" class="container_">
 				<h2>Objetivo</h2>
-				<p>Descrever e analisar o desenvolvimento de um script Makefile para compilação e execução dinâmica de  arquivos C, C++ e Python, utilizando um único comando.</p>
+				<p>Desenvolver um script de build para compilar / gerar um executável de pequenos códigos, depois veremos a necessidade de trabalhar com mais de um arquivo por vez.</p>
             </section>
 			<section id="ambiente" class="container_">
 				<h2>Ambiente</h2>
@@ -2750,7 +2751,9 @@ esse trecho do output mostra um erro, o chmod não consegue
 acessar o executável. corrija-o.
 além disso, adicione a opção --dest, ou -d, para definir o destino
 do binário. Caso nao for especificado o diretório, envie para 
-a pasta atual.
+a pasta atual. Por exemplo: vibe codigo.c -d, o binário deve ser 
+gerado no diretório atual. Pergunte se quer limpar o diretório 
+especificado caso não seja o atual.
             </pre>
 			<p><strong>Versão desenvolvida (Final):</strong></p>
 			<div class="code-container">
@@ -3149,6 +3152,26 @@ fi
             A minha opinião em relação ao projeto é positiva, mas vejo uma complexidade de levar isso além daqui.
             O uso de shell script foi interessante por causa da interabilidade com o terminal linux.
 			</p>
+
+            <h4>Pontos Positivos</h4>
+            <p class="positivos"><strong>
+                - A IA conseguiu desenvolver o projeto.
+                - O programa ficou funcional.
+                - O código ficou até que legível.
+                - Superou minhas expectativas.
+            </strong></p>
+            <p class="negativos"><strong>
+                - É extremamente díficil aprender com este processo.
+                - O a aba do ChatGPT ficava muito lento a ponto de crashar o computador quando gerava o código diversas vezes(creio que por falta de ram).
+                - É necessário ser específico, as vezes ele não faz tudo o que se espera.
+                - É necessário ser muito específico, as vezes ele faz o que não se espera.
+            </strong></p>
+            <p class="detalhes"><strong>
+                - A opção "-d" não limpa o diretório, para evitar exclusão de arquivos importantes, mas poderia ser implementado, e por sorte, não foi necessário especificar isso.
+                - Outro detalhe é que a opção '-d' não mostra explicitamente erro ao passar um arquivo em vez de um diretório.
+                Entretanto, poderia ser corrigido usando a IA, mas para não prolongar muito, ficará assim mesmo, até por que é intuitivo, por mais que seja uma falha, esse script não tem o objetivo que ser super completo e desenvolvido como uma ferramenta real.
+                - O script estará disponível no fim da página.
+            </strong></p>
 		</section>
 		<footer>
 			<p>&copy; 2025 Meu Projeto. Todos os direitos reservados.</p>
