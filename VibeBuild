@@ -53,7 +53,7 @@ while [[ "$1" =~ ^- ]]; do
 │ \  < / >  / |--|)                               │
 │  \_______/  |__|  One script to build them all  │
 │                                                 │
-│       https://github.com/rlois4/vibebuild/      │
+│           https://vibebuild.github.io/          │
 └─────────────────────────────────────────────────┘
 EOF
             echo -e "${NC}"

@@ -41,6 +41,78 @@
             pre.prompt {
                 color: white !important;
             }
+            .about {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin: 50px auto;
+    font-family: 'Courier New', monospace;
+}
+
+.about h2 {
+    color: #00ffcc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about h3 {
+    color: #00ffcc;
+    margin-top: 30px;
+}
+
+.about p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.about ul, .about ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.about li {
+    margin-bottom: 8px;
+}
+
+.about a {
+    color: #9c67ff;
+    text-decoration: none;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+.about pre {
+    background-color: #121212;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    color: #00ffcc;
+    margin: 10px 0;
+}
+
+.about blockquote {
+    border-left: 4px solid #00ffcc;
+    padding-left: 15px;
+    color: #aaa;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.ascii-art {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ascii-art pre {
+    display: inline-block;
+    text-align: left;
+}
+
 			.copy-button {
 			position: absolute;
 			top: 10px;
@@ -147,7 +219,7 @@
 					- OS: Arch Linux x86_64<br>
 					- Browser: Chromium 136.0.7103.113<br>
 					- Shell: GNU bash, version 5.2.37(1)-release<br>
-                    - IA: ChatGPT4o Openai
+                    - IA: ChatGPT4o Openai<br>
                     - Linguagem: Makefile (trocada logo no início do projeto por BashScript)<br>
                     - Terminal emulator: Kitty 0.42.0
 				</p>
@@ -2057,7 +2129,7 @@ logo:
 │ \  < / >  / |--|)                               │
 │  \_______/  |__|  One script to build them all  │ 
 │                                                 │
-│       https://github.com/rlois4/vibebuild/      │
+│           https://vibebuild.github.io/          │
 └─────────────────────────────────────────────────┘
             </pre>
 			<p><strong>Versão desenvolvida:</strong></p>
@@ -2107,7 +2179,7 @@ while [[ "$1" =~ ^- ]]; do
 │ \  < / >  / |--|)                               │
 │  \_______/  |__|  One script to build them all  │
 │                                                 │
-│       https://github.com/rlois4/vibebuild/      │
+│           https://vibebuild.github.io/          │
 └─────────────────────────────────────────────────┘
 EOF
             echo -e "${NC}"
@@ -2466,7 +2538,7 @@ while [[ "$1" =~ ^- ]]; do
 │ \  < / >  / |--|)                               │
 │  \_______/  |__|  One script to build them all  │
 │                                                 │
-│       https://github.com/rlois4/vibebuild/      │
+│           https://vibebuild.github.io/          │
 └─────────────────────────────────────────────────┘
 EOF
             echo -e "${NC}"
@@ -2878,7 +2950,7 @@ while [[ "$1" =~ ^- ]]; do
 │ \  < / >  / |--|)                               │
 │  \_______/  |__|  One script to build them all  │
 │                                                 │
-│       https://github.com/rlois4/vibebuild/      │
+│           https://vibebuild.github.io/          │
 └─────────────────────────────────────────────────┘
 EOF
             echo -e "${NC}"
@@ -3246,7 +3318,7 @@ fi
             <p class="detalhes"><strong>
                 - A opção "-d" não limpa o diretório, para evitar exclusão de arquivos importantes, mas poderia ser implementado, e por sorte, não foi necessário especificar isso.<br>
                 - Outro detalhe é que a opção '-d' não mostra explicitamente erro ao passar um arquivo em vez de um diretório. Entretanto, poderia ser corrigido usando a IA, mas para não prolongar muito, ficará assim mesmo, até por que é intuitivo, por mais que seja uma falha, esse script não tem o objetivo que ser super completo e desenvolvido como uma ferramenta real.<br>
-                - O script estará disponível no fim da página.<br>
+                - O script estará disponível no fim da página. Faça o download ou use o instalador do projeto.<br>
                 - O tempo total de construção do aplicativo de umas 5/8 horas, contando com contratempos.<br>
                 - Todas as expectativas básicas foram realizadas, porém há coisas que poderiam ainda ser implementadas.<br>
                 - No final acabou tendo mais funções que queriamos inicialmente (em minha opinião é um fator positivo).<br>
@@ -3269,6 +3341,64 @@ fi
             </strong></p>
 		</section>
     </section>
+    <section class="about">
+    <h2>Sobre o Projeto</h2>
+    <div class="ascii-art">
+<pre>
+┌─────────────────────────────────────────────────┐
+│       O       Idealizado Por:    Programado Por │
+│      _|_   Renato Lóis M. Silva      ChatGPT4o  │
+│     /   \                                       │
+│     () ()                                       │
+│    ,|_ _|,                                      │
+│  _/_______\_ ....         VibeBuild             │
+│  \  < / >  / |--|)                              │
+│   \_______/  |__|  Um script para compilar tudo │ 
+│                                                 │
+│          https://vibebuild.github.io/           │
+└─────────────────────────────────────────────────┘
+</pre>
+    </div>
+
+    <p><strong>VibeBuild</strong> é uma ferramenta simples para automação de compilação.</p>
+    <p>Ela nasceu da minha necessidade de compilar pequenos trechos de código de forma rápida e prática, sem precisar configurar Makefiles ou outras ferramentas complexas.</p>
+    <p>Juntando isso com uma pesquisa escolar sobre <em>vibe coding</em>, nasceu o <strong>VibeBuild</strong>.</p>
+
+    <h3>✨ Funcionalidades</h3>
+    <ul>
+        <li>🛠️ Compilação rápida para pequenos códigos.</li>
+        <li>🚀 Suporte a múltiplas linguagens.</li>
+        <li>📜 Geração de log detalhado.</li>
+        <li>🔥 Executar após compilar (<code>--run</code> ou <code>-r</code>).</li>
+        <li>🏗️ Alterar de GCC pra CLANG (<code>--clang</code>).</li>
+        <li>📁 Definir o diretório de saída (<code>-d</code>).</li>
+    </ul>
+
+    <h3>🚀 Como Usar</h3>
+    <ol>
+        <li>Clone o repositório:
+            <pre class="prompt">git clone https://github.com/VibeBuild/vibebuild.github.io<br>cd vibebuild</pre>
+        </li>
+        <li>Deixe o instalador executável:
+            <pre class="prompt">chmod +x installer</pre>
+        </li>
+        <li>Execute para instalar:
+            <pre class="prompt">./installer</pre>
+        </li>
+        <li>Execute o programa:
+            <pre class="prompt">vibe</pre>
+        </li>
+    </ol>
+
+    <h3>🔗 Links</h3>
+    <p>🔥 Projeto no GitHub: <a href="https://github.com/VibeBuild/vibebuild.github.io" target="_blank">https://github.com/VibeBuild/vibebuild.github.io</a></p>
+
+    <h3>📜 Licença</h3>
+    <p>Este projeto está licenciado sob a Licença GPL. Veja o arquivo <a href="https://github.com/VibeBuild/vibebuild.github.io/blob/main/LICENSE" target="_blank">LICENSE</a> para mais detalhes.</p>
+
+    <blockquote>“<strong>One script to build them all.</Script></strong>”<br>— <em>VibeBuild</em></blockquote>
+</section>
+
         <div class="download-container">
             <a href="https://vibebuild.github.io/VibeBuild" download class="download-button">Download</a>
         </div>
