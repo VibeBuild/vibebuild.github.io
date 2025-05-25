@@ -134,7 +134,12 @@
 		</div>
 			<section id="objetivo" class="container_">
 				<h2>Objetivo</h2>
-				<p>Desenvolver um script de build para compilar / gerar um executável de pequenos códigos, depois veremos a necessidade de trabalhar com mais de um arquivo por vez.</p>
+				<p>Desenvolver um script de build para compilar / gerar um executável de pequenos códigos, depois veremos a necessidade de trabalhar com mais de um arquivo por vez. Sendo interessante também a idéia de poder rodar os códigos, principalmente os que não são interpretados.<br><br><br>
+                <h5>Expectativas:</h5><br>
+                - Terminar em um dia [realizado, com pequenas alterações no outro dia, nada demais]<br>
+                - Compilar corretamente cada arquivo de forma separada e enviar para uma pasta (./bin/) [realizado]<br>
+                - Ser simples de utilizar [realizado]
+                </p>
             </section>
 			<section id="ambiente" class="container_">
 				<h2>Ambiente</h2>
@@ -143,14 +148,15 @@
 					- Browser: Chromium 136.0.7103.113<br>
 					- Shell: GNU bash, version 5.2.37(1)-release<br>
                     - IA: ChatGPT4o Openai
+                    - Linguagem: Makefile (trocada logo no início do projeto por BashScript)<br>
+                    - Terminal emulator: Kitty 0.42.0
 				</p>
 			</section>
             <section id="autor" class="container_">
 				<h2>Autor</h2>
 				<p>
-					- Renato Lóis Marcondes da Silva<br>
-					- Turma 1203<br>
-					- N° 22<br>
+					- Turma 1203<br><br>
+					- Renato Lóis Marcondes da Silva, N° 22<br>
                     - Email Institucional: 244084.aluno@iserj.edu.br<br>
                     - GitHub: <a href="https://github.com/rlois4/">RLois4</a><br>
 				</p>
@@ -3203,36 +3209,66 @@ fi
 		<section id="conclusao">
 			<h2>Conclusão</h2>
 			<p>O código atingiu seu objetivo. É notável a praticidade para criação de scripts mais simples usando o vibe coding. Acredito ser muito útil para problemas simples, grades e demorados, mas pode ser um tiro no pé para questões mais complexas como algoritmos matemáticos e sistemas críticos.
-			O uso da IA, no meu caso, foi de grande ajuda pois codificou quase 2,5k linhas em menos de um dia. Entretanto, acredito que para quem não tem muita noção do que está fazendo, nem das ferramentas que usa, o caso é diferente, como aconteceu no início quando a idéia original era usar makefile.
+			O uso da IA, no meu caso, foi de grande ajuda pois escreveu muitas linhas em menos de um dia. Entretanto, acredito que para quem não tem muita noção do que está fazendo, nem das ferramentas que usa, o caso é diferente, como aconteceu no início quando a ideia original era usar makefile.
 
             Sua aplicação é bem útil, no caso usei para compilar de uma vez diversos códigos de programação competitiva.
             
             A minha opinião em relação ao projeto é positiva, mas vejo uma complexidade de levar isso além daqui.
             O uso de shell script foi interessante por causa da interabilidade com o terminal linux.
+
+            Apesar disso, não acredito que essa forma nem de longe chegue a ser a melhor forma séria, profissional e viável de se desenvolver um software.
+
+            No meio do caminho, parecia que seria bem sólido, de certa forma ainda está, mas com o passar do desenvolvimento provavelmente ficará inconsistente.
 			</p>
             <br><br>
             <h4>Pontos Positivos:</h4>
             <p class="positivos"><strong>
                 - A IA conseguiu desenvolver o projeto.<br>
                 - O programa ficou funcional.<br>
-                - O código ficou até que legível.<br>
+                - O código ficou até que legível e estruturado.<br>
                 - Superou minhas expectativas.<br>
+                - Não mostrou lentidão.<br>
+                - A eficiência da IA se mostrou bastante superior do que no passado.<br>
+                - E ela se mostrou bastante prática e útil em casos de muito código repetido.
             </strong></p><br>
             <h4>Pontos Negativos:</h4>
             <p class="negativos"><strong>
                 - É extremamente díficil aprender com este processo.<br>
-                - O a aba do ChatGPT ficava muito lento a ponto de crashar o computador quando gerava o código diversas vezes(creio que por falta de ram).<br>
+                - O a aba do ChatGPT ficava muito lento a ponto de crashar o computador quando gerava o código diversas vezes (creio que pelo consumo de ram do Browser).<br>
                 - É necessário ser específico, as vezes ele não faz tudo o que se espera.<br>
                 - É necessário ser muito específico, as vezes ele faz o que não se espera.<br>
+                - Não é dá a mesma sensação de programar.<br>
+                - Impossível, ou só complicado, de afirmar que fui eu quem fiz isso.<br>
+                - Se eu não fizesse por essa pesquisa, a fim de que apenas rodasse o que eu precisava, no caso de ser simples no sentido de escrever pouca coisa, sem adicionar funcionalidades, talvez levasse menos tempo.
+                - Se fosse para um aplicativo real, isso iria ficando cada vez maior e mais complexo com o tempo, levando muito mais tempo.
             </strong></p><br>
             <h4>Detalhes:</h4>
             <p class="detalhes"><strong>
                 - A opção "-d" não limpa o diretório, para evitar exclusão de arquivos importantes, mas poderia ser implementado, e por sorte, não foi necessário especificar isso.<br>
-                - Outro detalhe é que a opção '-d' não mostra explicitamente erro ao passar um arquivo em vez de um diretório.<br>
-                Entretanto, poderia ser corrigido usando a IA, mas para não prolongar muito, ficará assim mesmo, até por que é intuitivo, por mais que seja uma falha, esse script não tem o objetivo que ser super completo e desenvolvido como uma ferramenta real.<br>
+                - Outro detalhe é que a opção '-d' não mostra explicitamente erro ao passar um arquivo em vez de um diretório. Entretanto, poderia ser corrigido usando a IA, mas para não prolongar muito, ficará assim mesmo, até por que é intuitivo, por mais que seja uma falha, esse script não tem o objetivo que ser super completo e desenvolvido como uma ferramenta real.<br>
                 - O script estará disponível no fim da página.<br>
+                - O tempo total de construção do aplicativo de umas 5/8 horas, contando com contratempos.<br>
+                - Todas as expectativas básicas foram realizadas, porém há coisas que poderiam ainda ser implementadas.<br>
+                - No final acabou tendo mais funções que queriamos inicialmente (em minha opinião é um fator positivo).<br>
+                - Aproveitando o embalo da situação, esse site foi utilizado um pouco de vibe coding para seu desenvolvimento.<br>
+                - Diversas vezes em que pedi mais de uma coisa consecutiva, eu mostrei somente um prompt reunindo os 3 pedidos, e aqui somente mostrei o output final.<br>
+                - Momentos em que a IA acabou criando coisas que nao condizia ao escopo, e depois corrigimos, não serão mostrados para não ficar um conteúdo massivo.
+                - O total de versões do código até agora foram 13 versões, que são separadas por alguma(s) mudança(s) significativa(s).
+            </strong></p><br>
+            <h4>Sobre o desenvolvimento:</h4>
+            <p class="AboutDev"><strong>
+                - A idéia do projeto surgiu quando precisei compilar cada questão de https://github.com/RLois4/questoes-Obi.<br>
+                - O que mais demorou provavelmente foi o tempo de espera para a IA gerar o código.<br>
+                - Em momento nenhum houve quebra ou erro de funcionalidades antigas com as implementadas naquela hora.
+            </strong></p><br>
+            <h4>A IA ameaça o mercado de trabalho da programação?</h4>
+            <p class="AboutDev"><strong>
+                - Para quem trabalha com soluções simples, como criar um blog estático ou scripts de automação menores, talvez sim.<br>
+                - Diria que a IA não teria capacidade nesses próximos anos para substituir igualmente um humano no seu trabalho em determinados setores da programação.<br>
+                - Designs mais complexos, Backends com alta necessidade de desempenho, programação em embarcados de mais baixo nível, algoritmos matemáticos com alto grau de dificuldade que precisam de complexidades Big-O mínimos e sistemas que gerenciam dados sensíveis são exemplos de coisas que nem podemos pensar em atribuir o trabalho às IA's.
             </strong></p>
 		</section>
+    </section>
         <div class="download-container">
             <a href="https://vibebuild.github.io/VibeBuild" download class="download-button">Download</a>
         </div>
