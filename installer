@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+# verifying root acces
+sudo -v 
+
+
+chmod +x ./VibeBuild
+sudo cp ./VibeBuild /usr/bin/vibe
+
+echo "VibeBuilder was installed succefully\n"
+echo "use 'vibe' to run"
