@@ -2889,7 +2889,8 @@ além disso, adicione a opção --dest, ou -d, para definir o destino
 do binário. Caso nao for especificado o diretório, envie para 
 a pasta atual. Por exemplo: vibe codigo.c -d, o binário deve ser 
 gerado no diretório atual. Pergunte se quer limpar o diretório 
-especificado caso não seja o atual.
+especificado caso não seja o atual. E Adicione a opcao -y e -n para 
+nao perguntar se quer limpar ou nao a pasta bin.
             </pre>
 			<p><strong>Versão desenvolvida (Final):</strong></p>
 			<div class="code-container">
@@ -2915,6 +2916,8 @@ QUIET=false
 RUN=false
 USE_CLANG=false
 DEST_SET=false
+FORCE_CLEAN=""
+ASSUME_NO_ALL=false
 
 # Se nenhum parâmetro for passado, mostra o help
 if [[ $# -eq 0 ]]; then
@@ -2937,6 +2940,8 @@ while [[ "$1" =~ ^- ]]; do
                 BIN_DIR="."
             fi
             ;;
+        -y) FORCE_CLEAN="yes" ;;
+        -n) FORCE_CLEAN="no" ;;
         --help|-h)
             echo -e "${BLUE}"
             cat << "EOF"
@@ -2961,6 +2966,8 @@ EOF
             echo "  --run,   -r   Compile (if needed) and run the code"
             echo "  --clang       Use clang/clang++ instead of gcc/g++"
             echo "  --dest,  -d   Set output directory (default: bin)"
+            echo "  -y            Always clean bin/ before building (no prompt)"
+            echo "  -n            Never clean bin/ (no prompt)"
             echo "  --help,  -h   Show this help"
             exit 0
             ;;
@@ -2974,10 +2981,17 @@ mkdir -p "$BIN_DIR"
 
 # ========== Pergunta se deve limpar ==========
 if [[ $# -gt 0 && $RUN == false && $BIN_DIR == "bin" ]]; then
-    read -p "Do you want to clean 'bin/' before building? (y/N) " choice
-    if [[ "$choice" =~ ^[Yy]$ ]]; then
+    if [[ "$FORCE_CLEAN" == "yes" ]]; then
         rm -rf "bin"/*
-        echo "Cleaned 'bin/'"
+        echo "Cleaned 'bin/' (forced)"
+    elif [[ "$FORCE_CLEAN" == "no" ]]; then
+        :
+    else
+        read -p "Do you want to clean 'bin/' before building? (y/N) " choice
+        if [[ "$choice" =~ ^[Yy]$ ]]; then
+            rm -rf "bin"/*
+            echo "Cleaned 'bin/'"
+        fi
     fi
 fi
 
@@ -2994,7 +3008,6 @@ unsupported_files=()
 notfound_files=()
 
 declare -A used_names
-ASSUME_NO_ALL=false
 
 # ========== Inicia log ==========
 {
