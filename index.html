@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 		<title>Projeto - Análise e Resenha</title>
@@ -29,6 +29,15 @@
 			.code-container {
 			position: relative;
 			}
+            .positivos strong {
+                color: rgb(92, 182, 255);
+            }
+            .negativos strong {
+                color: rgb(255, 115, 115);
+            }
+            .detalhes strong {
+                color: rgb(247, 255, 171);
+            }
             pre.prompt {
                 color: white !important;
             }
@@ -50,7 +59,7 @@
 			opacity: 1;
 			}
             .container_ {
-                gap: 20px; /* controla o espaçamento entre as sections internas */
+                gap: 20px;
             }
             .container_ a {
                 color: #9c67ff
@@ -58,18 +67,55 @@
             img {
                 padding-top: 20px;
             }
+.download-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #00ffcc;
+    color: #121212;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 5px 20px rgba(0, 255, 204, 0.3);
+}
+
+.download-button:hover {
+    background-color: #00e6b8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 255, 204, 0.5);
+}
+
+.download-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 255, 204, 0.2);
+}
+.downloadinbar {
+    color: #00e6b8;
+}
+
+
 		</style>
 	</head>
 	<body>
 		<header>
 			<nav>
-				<h1>Meu Projeto</h1>
+				<h1>Vibe Build</h1>
 				<ul>
 					<li><a href="#objetivo">Objetivo</a></li>
 					<li><a href="#ambiente">Ambiente</a></li>
 					<li><a href="#foco">Focos</a></li>
+                    <li><a href="#autor">Autor</a></li>
 					<li><a href="#desenvolvimento">Desenvolvimento</a></li>
                     <li><a href="#conclusao">Conclusão</a></li>
+                    <li><a href="https://vibebuild.github.io/VibeBuild" download class="downloadinbar">Download</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -117,13 +163,13 @@
 			<h2>1. Makefile Inicial</h2>
 			<p><strong>Prompt utilizado:</strong></p>
 			<pre class="prompt">
-criar um script makefile que tipo "make nomedoarquivo" e entao,
+criar um script makefile que receba "make nomedoarquivo" e entao,
 se for c++ ele compilar para c++, se for c, para c, se for python,
 so rodar python e nome do arquivo</pre>
 			<p><strong>Versão desenvolvida:</strong></p>
 			<div class="code-container">
 				<button class="copy-button" onclick="copyCode(this)">Copiar</button>
-				<pre><code class="language-makefile">
+				<pre><code class="language-bash">
 # Uso:
 # make nome_do_arquivo (sem extensão)
 
@@ -155,8 +201,7 @@ all:
 				<h3>Resultado</h3>
 				<p>O Makefile apresentou limitações na execução direta via. Conseguiu compilar códigos C e C++, mas não rodou corretamente código Python.</p>
 				<div class="sub-info">
-					<p>Após isso, surgiu a ideia de adicionar a função de compilar mais de um código gerando diversos binários, com somente um comando, deixando de lado momentâneamente o problema de não rodar Python. 
-						O código Makefile notou-se complexo, pois como dito, não tenho experiência nem conhecimento significativo dessa ferramenta, então decidimos trocar para bash script.
+					<p>Após isso, surgiu a ideia de adicionar a função de compilar mais de um código gerando diversos binários, com somente um comando, deixando de lado momentâneamente o problema de não rodar Python. O código Makefile notou-se complexo, pois como dito, não tenho experiência nem conhecimento significativo dessa ferramenta, então decidimos trocar para bash script.
 					</p>
 				</div>
 			</div>
@@ -308,13 +353,12 @@ done
 			<h2>2. Aprimoramento do código base</h2>
 			<p><strong>Prompt utilizado:</strong></p>
 			<pre class="prompt">
-                Trocar os emoji, melhor sem ser emoji, e torne mais agradavel 
-                a vista, no final, faca um relatorio, tem que ser tudo em ingles, 
-                se tudo ocorreu bem, se houve erro, se sim, mostre quantos deram 
-                warning, quantos deram erro, e aceite uma flag --info para mostrar 
-                os warning e erros, se nao, so compile, por padrão nao mostre os 
-erro do gcc e do g++, etc.
-</pre>
+Trocar os emoji, melhor sem ser emoji, e torne mais agradavel 
+a vista, no final, faca um relatorio, tem que ser tudo em ingles, 
+se tudo ocorreu bem, se houve erro, se sim, mostre quantos deram 
+warning, quantos deram erro, e aceite uma flag --info para mostrar 
+os warning e erros, se nao, so compile, por padrão nao mostre os 
+erro do gcc e do g++, etc.</pre>
 <p><strong>Versão desenvolvida:</strong></p>
 <div class="code-container">
     <button class="copy-button" onclick="copyCode(this)">Copiar</button>
@@ -362,32 +406,32 @@ declare -A errors
 for input in "${FILES[@]}"; do
 
 if [ -d "$input" ]; then
-        continue
-    fi
+continue
+fi
 
     name="${input%.*}"
     ext="${input##*.}"
-
+    
     if [ "$ext" == "$input" ]; then
-        if [ -f "$input.c" ]; then
-            ext="c"
-            input="$input.c"
-            elif [ -f "$input.cpp" ]; then
-            ext="cpp"
-            input="$input.cpp"
-            else
+    if [ -f "$input.c" ]; then
+    ext="c"
+    input="$input.c"
+    elif [ -f "$input.cpp" ]; then
+    ext="cpp"
+    input="$input.cpp"
+    else
             echo "[ERROR] Source file '$input.[c|cpp]' not found."
             ((error_count++))
             errors["$input"]="File not found"
             continue
         fi
-    fi
+        fi
     
-    if [ ! -f "$input" ]; then
-    echo "[ERROR] Source file '$input' not found."
-    ((error_count++))
-    errors["$input"]="File not found"
-    continue
+        if [ ! -f "$input" ]; then
+        echo "[ERROR] Source file '$input' not found."
+        ((error_count++))
+        errors["$input"]="File not found"
+        continue
     fi
     
     echo "Compiling $input -> $BIN_DIR/$name"
@@ -433,25 +477,25 @@ if [ -d "$input" ]; then
     # =============================
     echo ""
     echo "================ Build Report ================"
-echo "Total files: $((success_count + warning_count + error_count))"
+    echo "Total files: $((success_count + warning_count + error_count))"
 echo "Successful builds: $success_count"
 echo "Builds with warnings: $warning_count"
 echo "Failed builds: $error_count"
 echo "=============================================="
 
 if $SHOW_INFO; then
-    if [ ${#warnings[@]} -gt 0 ]; then
+if [ ${#warnings[@]} -gt 0 ]; then
         echo ""
         echo "Warnings:"
         for file in "${!warnings[@]}"; do
-            echo "---- $file ----"
-            echo "${warnings[$file]}"
-            echo ""
+        echo "---- $file ----"
+        echo "${warnings[$file]}"
+        echo ""
         done
-    fi
+        fi
 
     if [ ${#errors[@]} -gt 0 ]; then
-        echo ""
+    echo ""
         echo "Errors:"
         for file in "${!errors[@]}"; do
             echo "---- $file ----"
@@ -471,8 +515,15 @@ if $SHOW_INFO; then
 agora adicione a funcionalidade de que quando for um código python, 
 verifique se há um shebang como #!usr/bin/env python3, se nao, 
 adicione, e copie para bin com permissao de execucao, use chmod 
-para isso, para o python, pois gcc e g++ ja o tornam executaveis            
+para isso, para o python, pois gcc e g++ ja o tornam executaveis.
+Os arquivos agora só serão com extensão.            
             </pre>
+            </pre>
+                <div class="sub-info">
+                    <p>Aqui percebo que o uso do nome do arquivo sem extensão pode gerar ambiguidade, então essa ideia será deixada de lado.
+                </p>
+            </div>
+            <br>
 			<p><strong>Versão desenvolvida:</strong></p>
 			<div class="code-container">
                 <button class="copy-button" onclick="copyCode(this)">Copiar</button>
@@ -3136,7 +3187,7 @@ if [[ "$RUN" == false ]]; then
 fi
         		</code></pre>
 			</div>
-<img src="https://i.ibb.co/d0bY5Q9J/sf.png" alt="VibeBuild output">
+<img src="https://i.ibb.co/mrk6vFY9/1.png" alt="VibeBuild output">
 
 
 
@@ -3152,29 +3203,37 @@ fi
             A minha opinião em relação ao projeto é positiva, mas vejo uma complexidade de levar isso além daqui.
             O uso de shell script foi interessante por causa da interabilidade com o terminal linux.
 			</p>
-
-            <h4>Pontos Positivos</h4>
+            <br><br>
+            <h4>Pontos Positivos:</h4>
             <p class="positivos"><strong>
-                - A IA conseguiu desenvolver o projeto.
-                - O programa ficou funcional.
-                - O código ficou até que legível.
-                - Superou minhas expectativas.
-            </strong></p>
+                - A IA conseguiu desenvolver o projeto.<br>
+                - O programa ficou funcional.<br>
+                - O código ficou até que legível.<br>
+                - Superou minhas expectativas.<br>
+            </strong></p><br>
+            <h4>Pontos Negativos:</h4>
             <p class="negativos"><strong>
-                - É extremamente díficil aprender com este processo.
-                - O a aba do ChatGPT ficava muito lento a ponto de crashar o computador quando gerava o código diversas vezes(creio que por falta de ram).
-                - É necessário ser específico, as vezes ele não faz tudo o que se espera.
-                - É necessário ser muito específico, as vezes ele faz o que não se espera.
-            </strong></p>
+                - É extremamente díficil aprender com este processo.<br>
+                - O a aba do ChatGPT ficava muito lento a ponto de crashar o computador quando gerava o código diversas vezes(creio que por falta de ram).<br>
+                - É necessário ser específico, as vezes ele não faz tudo o que se espera.<br>
+                - É necessário ser muito específico, as vezes ele faz o que não se espera.<br>
+            </strong></p><br>
+            <h4>Detalhes:</h4>
             <p class="detalhes"><strong>
-                - A opção "-d" não limpa o diretório, para evitar exclusão de arquivos importantes, mas poderia ser implementado, e por sorte, não foi necessário especificar isso.
-                - Outro detalhe é que a opção '-d' não mostra explicitamente erro ao passar um arquivo em vez de um diretório.
-                Entretanto, poderia ser corrigido usando a IA, mas para não prolongar muito, ficará assim mesmo, até por que é intuitivo, por mais que seja uma falha, esse script não tem o objetivo que ser super completo e desenvolvido como uma ferramenta real.
-                - O script estará disponível no fim da página.
+                - A opção "-d" não limpa o diretório, para evitar exclusão de arquivos importantes, mas poderia ser implementado, e por sorte, não foi necessário especificar isso.<br>
+                - Outro detalhe é que a opção '-d' não mostra explicitamente erro ao passar um arquivo em vez de um diretório.<br>
+                Entretanto, poderia ser corrigido usando a IA, mas para não prolongar muito, ficará assim mesmo, até por que é intuitivo, por mais que seja uma falha, esse script não tem o objetivo que ser super completo e desenvolvido como uma ferramenta real.<br>
+                - O script estará disponível no fim da página.<br>
             </strong></p>
 		</section>
+        <div class="download-container">
+            <a href="https://vibebuild.github.io/VibeBuild" download class="download-button">Download</a>
+        </div>
+
+
+
 		<footer>
-			<p>&copy; 2025 Meu Projeto. Todos os direitos reservados.</p>
+			<p>&copy; 2025 Vibe Build. Todos os direitos reservados.</p>
 		</footer>
 		<script>
 			function copyCode(button) {
