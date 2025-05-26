@@ -50,6 +50,18 @@
     margin: 50px auto;
     font-family: 'Courier New', monospace;
 }
+img:not(.noborder) {
+ border: 5px solid #34ff89;
+}
+
+img {
+width: 60%; height: auto;
+margin:10px;
+}
+
+.grande {
+	width: 80%;
+}
 
 .about h2 {
     color: #00ffcc;
@@ -179,8 +191,6 @@
         -1px  1px 0 rgb(59, 86, 235),
          1px  1px 0 rgb(20, 126, 126);
 }
-
-
 		</style>
 	</head>
 	<body>
@@ -2890,7 +2900,8 @@ do binário. Caso nao for especificado o diretório, envie para
 a pasta atual. Por exemplo: vibe codigo.c -d, o binário deve ser 
 gerado no diretório atual. Pergunte se quer limpar o diretório 
 especificado caso não seja o atual. E Adicione a opcao -y e -n para 
-nao perguntar se quer limpar ou nao a pasta bin.
+nao perguntar se quer limpar ou nao a pasta bin e também adicione 
+isto ao --help.
             </pre>
 			<p><strong>Versão desenvolvida (Final):</strong></p>
 			<div class="code-container">
@@ -3285,10 +3296,15 @@ if [[ "$RUN" == false ]]; then
 fi
         		</code></pre>
 			</div>
-<img src="https://i.ibb.co/mrk6vFY9/1.png" alt="VibeBuild output">
+				<div class="sub-info">
+					<p>
+A partir daqui, se torna inviável o uso do ChatGPT4o, ele não consegue mais ler completamente o código, creio que devido seu tamanho, nem reescrevê-lo completamente, o uso da flag '-d' funciona, entretanto usando-a sem argumento (que deveria gerar os binários no diretório atual) não funciona, ele acha que code.c é um diretório em <pre> vibe -d code.c </pre> ou '-d' é visto como arquivo em <pre> vibe code.c -d </pre>
+Além disso, ele também não conseguiu implementar a funcionalidade de adicionar nos logs se bin/ foi limpo, e nem deixar a logo do programa com um degradê, assim como no instalador. Devido à isso, o código não vale mais a pena ser continuado pela IA.<br><br>
+Obs: enviando como arquivo ele aparenta conseguir ler tudo. Só que seus resultados não condizem com essa afirmação, gerando códigos com até metado do tamanho original.
+					</p>
+				</div>
 
-
-
+<img src="https://i.ibb.co/tpNwZjpJ/nv.png" alt="ChatGPT's code" class="grande">
 		</section>
 		<br><br>
 		<section id="conclusao">
@@ -3424,13 +3440,12 @@ fi
     <p>Este projeto está licenciado sob a Licença GPL. Veja o arquivo <a href="https://github.com/VibeBuild/vibebuild.github.io/blob/main/LICENSE" target="_blank">LICENSE</a> para mais detalhes.</p>
 
     <blockquote>“<strong>One script to build them all.</Script></strong>”<br>— <em>VibeBuild</em></blockquote>
+<img src="https://i.ibb.co/ksTK6X0L/vibe.png" alt="VibeBuild output" class="noborder">
 </section>
 
         <div class="download-container">
             <a href="https://vibebuild.github.io/VibeBuild" download class="download-button">Download</a>
         </div>
-
-
 
 		<footer>
 			<p>&copy; 2025 Vibe Build. Todos os direitos reservados.</p>
@@ -3448,3 +3463,4 @@ fi
 		</script>
 	</body>
 </html>
+
