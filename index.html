@@ -2634,6 +2634,7 @@ for file in "$@"; do
                 cat "$file" >> "$BIN_DIR/$output_name"
                 info="(added shebang: #!/usr/bin/env python3)"
             fi
+                obs: o tempo não está 100% preciso devido às pausas feitas durante o desenvolvimento do projeto. Vale ressaltar o fato de não termos considerados o tempo para analisar o código e tentar entender, e aprender com algumas coisas que a IA sugeria. 
             chmod +x "$BIN_DIR/$output_name"
             echo "[PY] $filename -> bin/$output_name $info (interpreter: $interp)" >> "$LOG_FILE"
             $QUIET || echo "[PY  ] $filename -> bin/$output_name $info ($interp)"
@@ -3195,16 +3196,17 @@ Obs: enviando como arquivo ele aparenta conseguir ler tudo. Só que seus resulta
 			</p>
             <br>
             <h3>
-                Tempo total ->< 17 horas +/-<br>
-                planejamente: 10 minutos.<br>
-                desenvolvimento: cerca de 4/5 horas.<br>
-                correções: 1/2 horas.<br>
-                testes: menos de 1 hora, os testes não foram tão demorados.<br>
-                criação do projeto no github + subir página: 30 minutos.<br>
+                Tempo total de produção ->< 20 horas +/-<br>
+				Tempo total bruto -> 3 dias + pequenas correções até agora<br>
+                planejamente: 30 minutos.<br>
+                desenvolvimento: cerca de 9/10 horas.<br>
+                correções: 3/4 horas.<br>
+                testes: menos de 2 horas, os testes não foram tão demorados, o que demorou talvez, tenha sido tentar entender os erros, não sendo culpa da ia.<br>
+                criação do projeto no github + subir página: 40 minutos, por alguns erros<br>
                 criação do instalador: +/- 20 minutos.<br>
-                criação do site (desconsiderado): mais ou menos 5 horas. Foi usado IA para a criação rápida e principalmente pro css.<br>
+                criação do site: mais ou menos 5 horas. Foi usado IA para otimizar o tempo, principalmente pro css.<br>
                 <br>
-                obs: o tempo não está 100% preciso devido às pausas feitas durante o desenvolvimento do projeto. Além de não termos considerados o tempo para analisar o código e tentar entender, e aprender com algumas coisas que a IA sugeria. foram alguns dias, mas se refizesse com uma experiência prévia, o tempo cairia bastante, o planejamente ter mudado constantemente também afetou o tempo, fora aprender a como deixar um site assim no github acessível online.
+                obs: o tempo não está 100% preciso devido às pausas feitas durante o desenvolvimento do projeto. Vale ressaltar o fato de não termos considerados o tempo para analisar o código e tentar entender, e aprender com algumas coisas que a IA sugeria. Foram alguns dias de desenvolvimento, mas se refizesse com uma experiência prévia, o tempo cairia bastante, o planejamente ter mudado constantemente também afetou o tempo, fora aprender a como deixar um site assim no github acessível online.
             </h3>
 
             <br><br>
@@ -3220,12 +3222,12 @@ Obs: enviando como arquivo ele aparenta conseguir ler tudo. Só que seus resulta
             </strong></p><br>
             <h4>Pontos Negativos:</h4>
             <p class="negativos"><strong>
-                - É extremamente díficil aprender com este processo.<br>
+                - É extremamente díficil aprender com este processo. A IA ajuda a aprender, mas é ruim dessa forma, durante a produção<br>
                 - O a aba do ChatGPT ficava muito lento a ponto de crashar o computador quando gerava o código diversas vezes (creio que pelo consumo de ram do Browser).<br>
                 - É necessário ser específico, as vezes ele não faz tudo o que se espera.<br>
                 - É necessário ser muito específico, as vezes ele faz o que não se espera.<br>
-                - Não é dá a mesma sensação de programar.<br>
-                - Impossível, ou só complicado, de afirmar que fui eu quem fiz isso.<br>
+                - Não dá a mesma sensação de programar.<br>
+                - Não consigo afirmar que fui eu quem fiz isso. Mesmo perdendo tempo e focando nisso isso<br>
                 - Se eu não fizesse por essa pesquisa, a fim de que apenas rodasse o que eu precisava, no caso de ser simples no sentido de escrever pouca coisa, sem adicionar funcionalidades, talvez levasse menos tempo.
                 - Se fosse para um aplicativo real, isso iria ficando cada vez maior e mais complexo com o tempo, levando muito mais tempo.
             </strong></p><br>
@@ -3241,18 +3243,19 @@ Obs: enviando como arquivo ele aparenta conseguir ler tudo. Só que seus resulta
                 - Diversas vezes em que pedi mais de uma coisa consecutiva, eu mostrei somente um prompt reunindo os 3 pedidos, e aqui somente mostrei o output final.<br>
                 - Momentos em que a IA acabou criando coisas que nao condizia ao escopo, e depois corrigimos, não serão mostrados para não ficar um conteúdo massivo.
                 - O total de versões do código até agora foram 13 versões, que são separadas por alguma(s) mudança(s) significativa(s).
+				- Acredito que se o objetivo fosse mais específico e menos genérico no sentido de funcionalidades, a IA seria de boa ajuda.
             </strong></p><br>
             <h4>Sobre o desenvolvimento:</h4>
             <p class="AboutDev"><strong>
                 - A idéia do projeto surgiu quando precisei compilar cada questão de https://github.com/RLois4/questoes-Obi.<br>
                 - O que mais demorou provavelmente foi o tempo de espera para a IA gerar o código.<br>
-                - Em momento nenhum houve quebra ou erro de funcionalidades antigas com as implementadas naquela hora.
+                - Em momento nenhum houve quebra ou erro de funcionalidades antigas com as implementadas naquela hora. Obs: olhando isso depois de um tempo, parece ter sido sorte, pois isso é comum de acontecer.
             </strong></p><br>
             <h4>A IA ameaça o mercado de trabalho da programação?</h4>
             <p class="AboutDev"><strong>
-                - Para quem trabalha com soluções simples, como criar um blog estático ou scripts de automação menores, talvez sim.<br>
+                - Para quem usa programação básica como fonte de renda extra, como criar um blog estático ou scripts de automação menores, talvez sim.<br>
                 - Diria que a IA não teria capacidade nesses próximos anos para substituir igualmente um humano no seu trabalho em determinados setores da programação.<br>
-                - Designs mais complexos, Backends com alta necessidade de desempenho, programação em embarcados de mais baixo nível, algoritmos matemáticos com alto grau de dificuldade que precisam de complexidades Big-O mínimos e sistemas que gerenciam dados sensíveis são exemplos de coisas que nem podemos pensar em atribuir o trabalho às IA's.
+                - Designs mais complexos, Backends com alta necessidade de desempenho, programação em embarcados de mais baixo nível, algoritmos matemáticos com alto grau de dificuldade que precisam de complexidades Big-O mínimos e sistemas que gerenciam dados sensíveis são exemplos de coisas que nem podemos pensar em atribuir o trabalho às IA's atuais.
             </strong></p>
 		</section>
     </section>
