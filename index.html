@@ -3170,7 +3170,7 @@ fi
 			</div>
 				<div class="sub-info">
 					<p>
-A partir daqui, se torna inviável o uso do ChatGPT4o, ele não consegue mais ler completamente o código, creio que devido seu tamanho, nem reescrevê-lo completamente, o uso da flag '-d' funciona, entretanto usando-a sem argumento (que deveria gerar os binários no diretório atual) não funciona, ele acha que code.c é um diretório em <pre> vibe -d code.c </pre> ou então a flag '-d' é visto como arquivo em <pre> vibe code.c -d </pre>
+A partir daqui, se torna inviável o uso do ChatGPT4o, ele não consegue mais ler completamente o código, creio que devido seu tamanho, nem reescrevê-lo completamente, o uso da flag '-d' funciona, entretanto usando-a sem argumento (que deveria gerar os binários no diretório atual) não funciona, ele acha que code.c é um diretório em <pre> vibe -d code.c </pre> ou então a flag '-d' é visto como arquivo em <pre> vibe code.c -d </pre> Por mais que em: <pre> vibe -d . code.c</pre> o problema seja "resolvido", a ia não conseguiu reestruturar a parte do código para manter a lógica dessa flag funcional caso o diretório não seja especificado
 Além disso, ele também não conseguiu implementar a funcionalidade de adicionar nos logs se bin/ foi limpo, e nem deixar a logo do programa com um degradê, assim como no instalador. Devido à isso, o código não vale mais a pena ser continuado pela IA.<br><br>
 Obs: enviando como arquivo ele aparenta conseguir ler tudo. Só que seus resultados não condizem com essa afirmação, gerando códigos com até metado do tamanho original.
 					</p>
